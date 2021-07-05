@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACE,eADa,CACb,KAAK,CAAC,UAAU,AAAC,CACf,YAAY,CAAE,MAAM,CACpB,UAAU,CAAE,IAAI,CACjB",
+    "sources": [
+        "../sass/include/precios-especiales.scss"
+    ],
+    "names": [],
+    "file": "precios-especiales.css"
+}

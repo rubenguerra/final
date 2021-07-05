@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block 'login' %}
+{% load static %}
+
+
+<div class="sufee-login d-flex align-content-center flex-wrap">
+    <br>
+    <div class="container">
+        <br>
+        <div class="login-content">
+            <div class="login-logo">
+                <a href="#">
+                    <img style="height: 6rem;" src="{% static '/assets/20210630_125456.png' %}" alt="logo" class="align-content">
+                </a>
+            </div>
+            <br>
+            <div class="login-form">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label>Nombre de usuario</label>
+                        <input type="text" class="form-control" placeholder="Nombre de usuario" name="username">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label>Contraseña</label>
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password">
+                    </div>
+                    <br>
+                    <button class="btn btn-warning btn-flat m-b-30 m-t-30" type="submit" id="submit">Login</button>
+
+                </form>
+                <br>
+                <br>
+                <br>
+            </div>
+            <br>
+        </div>
+    </div>
+    <br>
+</div>
+
+{% endblock %}

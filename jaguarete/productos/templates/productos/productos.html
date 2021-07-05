@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+
+
+{% block 'productos' %}
+
+{% load static %}
+
+
+    <!-- Sitio principal -->
+    <main id="main-site">
+        <!-- Productos -->
+        <section id="producto" class="py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="{% static 'assets/productos/iphone1.jpg' %}" alt="product" class="img-fluid">
+                        <div class="form-row pt-4 font-size-16 font-baloo">
+                            <div class="col">
+                                <button type="submit" class="btn btn-danger form-control">Comprar</button>
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-warning form-control">Añadir al carrito</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 py-5">
+                        <h5 class="font-baloo font-size-20">Iphone I</h5>
+                        <small>by Apple</small>
+                        <div class="d-flex">
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <a href="#" class="px-2 font-rale font-size-14">34 Productos en stock</a>
+                        </div>
+                        <hr class="m-0">
+                        <!-- Sección de precio del producto -->
+                        <table class="my-3">
+                            <tr class="font-rale-font-size-14">
+                                <td>P.M.</td>
+                                <td><strike>$ 35000</strike></td>
+                            </tr>
+                            <tr class="font-rale-font-size-14">
+                                <td>Precio especial.</td>
+                                <td class="font-size-20 text-danger">$<span>30000</span><small
+                                        class="text-dark font-size-12">&nbsp;&nbspIncluye IVA</small></td>
+                            </tr>
+                            <tr class="font-rale-font-size-14">
+                                <td>Ahorras.</td>
+                                <td><span class="font-size-16 text-danger">$ 5000</span></td>
+                            </tr>
+                        </table>
+                        <!-- Sección de precio del producto -->
+                        <!-- #Política -->
+                        <div id="politica">
+                            <div class="d-flex">
+                                <div class="return text-center mr-5">
+                                    <div class="font-size-20 my-2 color-second">
+                                        <span class="fas fa-retweet border p-3 rounded-pill"></span>
+                                    </div>
+                                    <a href="#" class="font-rale font-size-12">10 días <br>Remplazo</a>
+                                </div>
+                                <div class="return text-center mr-5">
+                                    <div class="font-size-20 my-2 color-second">
+                                        <span class="fas fa-truck border p-3 rounded-pill"></span>
+                                    </div>
+                                    <a href="#" class="font-rale font-size-12">Entrega<br>a todo el país</a>
+                                </div>
+                                <div class="return text-center mr-5">
+                                    <div class="font-size-20 my-2 color-second">
+                                        <span class="fas fa-check-double border p-3 rounded-pill"></span>
+                                    </div>
+                                    <a href="#" class="font-rale font-size-12">1 año<br>de garantía</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- #Política -->
+                        <hr>
+                        <!-- Detalle de la orden -->
+                        <div id="detalle-orden" class="font-rale d-flex flex-column text-dark">
+                            <small>Entrega el: 24 dic-23 enero</small>
+                            <small>Vendido por <a href="#">Apple</a>(4.5 out of 5 | 18.198 de rating)</small>
+                            <small><i class="fas fa-map-marker-alt color-primary"></i>&nbsp;&nbsp;Entregado al cliente:
+                                zp 2000
+                            </small>
+                        </div>
+                        <!-- Detalle de la orden -->
+                        <div class="row">
+                            <div class="col-6">
+                                <!-- color -->
+                                <div class="color my-3">
+                                    <div class="d-flex justify-content-between">
+
+                                        <h6 class="font-baloo">Colores:</h6>
+                                        <div class="p-2 color-yellow-bg rounded-circle"><button
+                                                class="btn font-size-14"></button></div>
+                                        <div class="p-2 color-primary-bg rounded-circle"><button
+                                                class="btn font-size-14"></button></div>
+                                        <div class="p-2 color-second-bg rounded-circle"><button
+                                                class="btn font-size-14"></button></div>
+
+                                    </div>
+                                </div>
+                                <!-- color -->
+
+
+                            </div>
+                            <div class="col-6">
+                                <!-- Sección Cantidad de Producto -->
+
+                                <div class="qty d-flex">
+                                    <h6 class="font baloo">Cantidad</h6>
+                                    <div class="px-4 d-flex font-rale">
+                                        <button class="qty-up border bg-ligth" data-id="pro1"><i
+                                                class="fas fa-angle-up"></i></button>
+                                        <input type="text" data-id="pro1" class="qty_input border px2 w-25 bg-ligth"
+                                            disabled value="1" placeholder="1">
+                                        <button class="qty-down border bg-ligth" data-id="pro1"><i
+                                                class="fas fa-angle-down"></i></button>
+                                    </div>
+                                </div>
+
+                                <!-- !Sección Cantidad de Producto -->
+
+                            </div>
+                        </div>
+                        <!-- Tamaño de RAM -->
+                        <div class="size my-3">
+                            <h6 class="font-baloo">Tamaño:</h6>
+                            <div class="d-flex justify-content-between w-75">
+                                <div class="font-rubik border p-2">
+                                    <button class="btn p-0 font-size-14">4 GB RAM</button>
+                                </div>
+                                <div class="font-rubik border p-2">
+                                    <button class="btn p-0 font-size-14">16 GB RAM</button>
+                                </div>
+                                <div class="font-rubik border p-2">
+                                    <button class="btn p-0 font-size-14">32 GB RAM</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tamaño de RAM -->
+                    </div>
+                    <div class="col-12">
+                        <h6 class="font-rubik">Descripción del producto</h6>
+                        <hr>
+                        <p class="font-rale font-size-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam rem dolor molestias. Saepe voluptatum officiis illum voluptates provident
+                            repudiandae corporis, rem, modi numquam quos temporibus magni hic dolorem laudantium harum
+                            accusantium cum optio necessitatibus iste. Facere blanditiis officiis, commodi, minima
+                            doloribus cupiditate inventore nam nulla expedita nihil tempora natus labore!</p>
+                        <p class="font-rale font-size-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam rem dolor molestias. Saepe voluptatum officiis illum voluptates provident
+                            repudiandae corporis, rem, modi numquam quos temporibus magni hic dolorem laudantium harum
+                            accusantium cum optio necessitatibus iste. Facere blanditiis officiis, commodi, minima
+                            doloribus cupiditate inventore nam nulla expedita nihil tempora natus labore!</p>
+                        <p class="font-rale font-size-14">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Quisquam rem dolor molestias. Saepe voluptatum officiis illum voluptates provident
+                            repudiandae corporis, rem, modi numquam quos temporibus magni hic dolorem laudantium harum
+                            accusantium cum optio necessitatibus iste. Facere blanditiis officiis, commodi, minima
+                            doloribus cupiditate inventore nam nulla expedita nihil tempora natus labore!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos -->
+        <!-- Más vendidos -->
+        <section id="top-sale">
+            <div class="container py-5">
+                <h4 class="font-rubik font-size-20">Más vendidos</h4>
+                <hr>
+                <!-- Owl carousel -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/lgk40.jpg' %}" alt="product1" class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>LG 40</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$30000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/lgk50.jpg' %}" alt="product1" class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>LG 50</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$20000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/motorolaG9.jpg' %}" alt="product1"
+                                    class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Motorola G9</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$25000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/xiaomiRedmi.jpg' %}" alt="product1"
+                                    class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>xiaomi Redmi</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$35000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/samsungS20fe.jpg' %}" alt="product1"
+                                    class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Samsung S20</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$35000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/samsungZFlip.jpg' %}" alt="product1"
+                                    class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Samsung ZFlip</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$35000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item py-2">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/xiaomi9S.jpg' %}" alt="product1" class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Xiaomi 9S</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$35000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- !Owl carousel -->
+
+            </div>
+        </section>
+        <!-- Más vendidos -->
+
+    </main>
+    <!-- Sitio principal -->
+{% endblock %}

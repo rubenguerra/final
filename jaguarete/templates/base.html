@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+
+<head>
+    <title>{% block title %}Jaguaret KAA SA{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <!-- Owl Carrousel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+          crossorigin="anonymous"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+          crossorigin="anonymous"/>
+    <!-- Archivo CSS-->
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}"/>
+
+    <style> .navbar-brand > img { height: 90px }</style>
+</head>
+
+<body>
+
+<!-- Comienza cabecera -->
+<header id="cabecera">
+    <div class="strip d-flex justify-content-between px-20 py-3 bg-light">
+        <p class="font-rale font-size-18 text-black-50 m-2">Jaguarete KAA SA</p>
+        <div class="font-rale font-size-28">
+            {% if user.is_authenticated %}
+            <a href="/logout" class="px-20 border-right border-left text-dark">Logout </a>
+            {% else %}
+            <a href="/login" class="px-20 border-right border-left text-dark"> Login</a>
+            {% endif %}
+            <a href="/registro" class="px-20 border-right border-left text-dark">Registro</a>
+            <a href="/canasta" class="py-2 rounded-pill color-primary-bg">
+                <span class="font-size-16 px-2 text-white"><i class="fas fa-shopping-cart"></i></span>
+                <span class="px-3 py-2 rounded-pill text-dark bg-light">0</span>
+            </a>
+            <!--</form> -->
+        </div>
+    </div>
+</header>
+
+{% if messages %}
+{% for message in messages %}
+<div class="notification {{ message.tags }}">
+    {{ message }}
+</div>
+
+{% endfor %}
+{% endif %}
+<!-- Barra de navegacion primaria -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a class="navbar-brand" href="/nosotros"><img src="{% static '/assets/20210630_125456.png' %}" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav m-auto font-rubik">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#especial-price">Categorías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/#new-phones">Nuevos Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/lista">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/nosotros">Acerca de...</a>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0" action="{% url 'buscar' %}">
+            <input type="search" class="form-control mr-sm-2" placeholder="Buscar" aria-label="Search" name="search" value="{{ buscar_text }}" minlength="3">
+            <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+
+    </div>
+</nav>
+
+<!-- Fin barra de navegación primaria -->
+
+<!-- Termina cabecera -->
+
+{% block 'login' %}{% endblock %}
+
+{% block 'inicio' %} {% endblock %}
+
+{% block 'productos' %} {% endblock %}
+
+{% block content %} {% endblock %}
+
+{% block 'canasta' %} {% endblock %}
+
+{% block 'listado' %} {% endblock %}
+
+{% block 'nosotros' %} {% endblock %}
+
+
+<!-- Pie de pagina -->
+<footer id="footer" class="bg-dark text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <h4 class="font-rubik.font-size-20">e-tienda Jaguarete KAA</h4>
+                <p class="font-size-14 font-rale text-white-50">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum nisi odit harum ut reprehenderit.
+                    Necessitatibus dolorum placeat aperiam perspiciatis possimus.
+                </p>
+            </div>
+            <div class="col-lg-4 col-12">
+                <h4 class="font-rubik font-size-20">Contáctanos</h4>
+                <form action="" class="form-row">
+                    <div class="col">
+                        <input type="email" class="form-control" placeholder="E-mail">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-warning mb-2">Enviar</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-lg-2 col-12">
+                <h4 class="font-rubik.font-size-20">Sobre nuestra tienda</h4>
+                <div class="d-flex flex-column flex-wrap">
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Quiénes somos</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Entregas</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Términos y condiciones</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Política de privacidad</a>
+                </div>
+            </div>
+            <div class="col-lg-2 col-12">
+                <h4 class="font-rubik.font-size-20">Cuenta</h4>
+                <div class="d-flex flex-column flex-wrap">
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Mi cuenta</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Historial</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Lista</a>
+                    <a href="#" class="font-rale font-size-14 text-white-50 pb-1">Noticias</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<div class="copyright text-center bg-dark text-white py-2">
+    <p class="font-rale font-size-14">&copy; Copyright 2021 - Rubén Guerra</p>
+</div>
+<!-- Pie de pagina -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<!-- Owl Carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"></script>
+
+<!-- Jquery Isotope -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+        integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
+        crossorigin="anonymous"></script>
+
+<script src="{% static 'js/index.js' %}"></script>
+</body>
+
+</html>

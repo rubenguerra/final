@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+<h2>Perfil</h2>
+
+  <p>
+    Username: {{ request.user.username }} <br>
+    Nombre: {{ request.user.nombre }} {{ request.user.apellido }}<br>
+    Fecha de contacto: {{ request.user.date_joined }} <br>
+    Email: {{ request.user.email }}<br>
+    Ultimo Login: {{ request.user.last_login }}<br>
+  </p>
+</div>
+{% endblock %}

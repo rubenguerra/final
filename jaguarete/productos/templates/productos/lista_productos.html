@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block 'listado' %}
+{% load static %}
+
+<div class="container">
+    <h1 class="text-center">Productos en existencia</h1>
+    <ul class="list_group">
+        {% for producto in productos %}
+        <li class="list-group-item"> {{ producto.nombre }} ($ {{ producto.precio }})</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+
+{% endblock %}
+
+
+<!--
+
+
+<div class="card" style="width: 18rem;">
+    <img src="{{ producto.image }" class="card-img-top" alt="x">
+    <div class="card-body">
+        <h5 class="card-title">{{ producto.nombre }}</h5>
+        <h6 class="card-title">${{ producto.precio }}</h6>
+        <p class="card-text">({{ producto.stock }}) en stock</p>
+        <a href="#" class="btn btn-warning">Agregar a canasta</a>
+    </div>
+</div>
+<br>
+-->

@@ -1,0 +1,632 @@
+{% extends 'base.html' %}
+
+{% block 'inicio' %}
+{% load static %}
+
+<!-- Sitio principal -->
+<main id="main-site">
+
+    <!-- Owl Carrusel -->
+    <section id="banner-area">
+        <div class="container">
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{% static '/assets/prueba1.png' %}" alt="banner1">
+                </div>
+                <div class="item">
+                    <img src="{% static '/assets/banner/laptop2.png' %}" alt="banner2">
+                </div>
+                <div class="item">
+                    <img src="{% static '/assets/banner/laptop1.png' %}" alt="banner3">
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- Owl Carrusel -->
+
+    <!-- Más vendidos -->
+    <section id="top-sale">
+        <div class="container py-5">
+            <h4 class="font-rubik font-size-20">Más vendidos</h4>
+            <hr>
+            <!-- Owl carousel -->
+            <div class="owl-carousel owl-theme">
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/lgk40.jpg' %}" alt="producto1"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>LG 40</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$30000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/lgk50.jpg' %}" alt="producto2"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>LG 50</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$20000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/motorolaG9.jpg' %}" alt="product3"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Motorola G9</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$25000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/xiaomiRedmi.jpg' %}" alt="product1"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>xiaomi Redmi</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/samsungS20fe.jpg' %}" alt="product1"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Samsung S20</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/samsungZFlip.jpg' %}" alt="product1"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Samsung ZFlip</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/xiaomi9S.jpg' %}" alt="product1"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Xiaomi 9S</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- !Owl carousel -->
+
+        </div>
+    </section>
+    <!-- Más vendidos -->
+
+    <!-- Precios especiales -->
+    <section id="especial-price">
+        <div class="container">
+            <h4 class="font-rubik font-size-20">Secciones de compra</h4>
+            <div id="filters" class="button-group text-right font-baloo font-size-16">
+                <button class="btn is-checked" data-filter="*">Todas las secciones</button>
+                <button class="btn" data-filter=".Apple">Apple</button>
+                <button class="btn" data-filter=".Xiaomi">Xiaomi</button>
+                <button class="btn" data-filter=".LG">LG</button>
+                <button class="btn" data-filter=".Samsung">Samsung</button>
+            </div>
+
+            <div class="grid">
+                <div class="grid-item Apple border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/iphone2.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Iphone XS</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$30000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Samsung border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/samsungGalaxyS20.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>samsung Galaxy S20</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$25000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Apple border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/iphone10.jpg' %}." alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Iphone XS</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$32000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Samsung border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/samsungS20fe.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Samsung S20</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$24000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Samsung border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/samsungZFlip.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Samsung ZF</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$25000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item LG border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/lgk40.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>LG K40</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$20000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item LG border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/lgk50.jpg' %}." alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>LG K50</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$20000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Xiaomi border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/xiaomi9S.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Xiaomi 9S</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$20000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-item Xiaomi border">
+                    <div class="item py-2" style="width: 200px;">
+                        <div class="product font-rale">
+                            <a href="#"><img src="{% static '/assets/productos/xiaomiRedmi.jpg' %}" alt="product1"
+                                             class="img-fluid"></a>
+                            <div class="text-center">
+                                <h6>Xiaomi Redmi</h6>
+                                <div class="rating text-warning font-size-12">
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="fas fa-star"></i></span>
+                                    <span class=""><i class="far fa-star"></i></span>
+                                </div>
+                                <div class="price py-2">
+                                    <span>$20000</span>
+                                </div>
+                                <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- !Precios especiales -->
+
+    <!-- Banner extras     -->
+    <section id="banner_adds">
+        <div class="container py-5 text-center">
+            <img src="{% static '/assets/aviso.png' %}" alt="banner" class="img-fluid">
+            <img src="{% static '/assets/aviso.png' %}" alt="banner" class="img-fluid">
+        </div>
+    </section>
+    <!-- Banner extras -->
+
+    <!-- Nuevos productos -->
+    <section class="" id="new-phones">
+        <div class="container">
+            <h4 class="font-rubik font-size-20">Nuevos productos</h4>
+            <hr>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/lgk40.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>LG 40</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$30000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/lgk50.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>LG 50</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$20000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/motorolaG9.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Motorola G9</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$25000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/xiaomiRedmi.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>xiaomi Redmi</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/samsungS20fe.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Samsung S20</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/samsungZFlip.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Samsung ZFlip</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item py-2">
+                    <div class="product font-rale">
+                        <a href="#"><img src="{% static '/assets/productos/xiaomi9S.jpg' %}" alt="producto"
+                                         class="img-fluid"></a>
+                        <div class="text-center">
+                            <h6>Xiaomi 9S</h6>
+                            <div class="rating text-warning font-size-12">
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="fas fa-star"></i></span>
+                                <span class=""><i class="far fa-star"></i></span>
+                            </div>
+                            <div class="price py-2">
+                                <span>$35000</span>
+                            </div>
+                            <button class="btn btn-warning font-size-12" type="submit">Añadir al carro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Nuevos telélefonos     -->
+
+    <!-- Clientes -->
+    <section id="blogs">
+        <div class="container py-4">
+            <h4 class="font-rubik font-size-20">Nuestros clientes opinan...</h4>
+            <hr>
+
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="card border-0 font-rale mr-5" style="width: 22rem;">
+                        <h5 class="card-title font-size-16"><q>Precios increíbles...</q></h5>
+                        <img src="{% static '/assets/blogs/pexels-andrea-piacquadio-3756618.jpg' %}" alt="cart image"
+                             class="card-img-top">
+                        <p class="card-text font-size-14 text-black-50 py-1">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Suscipit, saepe? Vero magnam quasi repellat
+                            velit...</p>
+                        <a href="#" class="color-second text-left">Leer más</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card border-0 font-rale mr-5" style="width: 22rem;">
+                        <h5 class="card-title font-size-16"><q>Compras sin dejar el confort...</q></h5>
+                        <img src="{% static '/assets/blogs/pexels-andrea-piacquadio-3772531.jpg' %}" alt="imagen"
+                             class="card-img-top">
+                        <p class="card-text font-size-14 text-black-50 py-1">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Suscipit, saepe? Vero magnam quasi repellat
+                            velit...</p>
+                        <a href="#" class="color-second text-left">Leer más</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="card border-0 font-rale mr-5" style="width: 22rem;">
+                        <h5 class="card-title font-size-16"><q>Atención especializada...</q></h5>
+                        <img src="{% static '/assets/blogs/pexels-katie-e-3671123.jpg' %}" alt="image"
+                             class="card-img-top">
+                        <p class="card-text font-size-14 text-black-50 py-1">Lorem ipsum dolor sit amet consectetur
+                            adipisicing
+                            elit. Suscipit, saepe? Vero magnam quasi repellat
+                            velit...</p>
+                        <a href="#" class="color-second text-left">Leer más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--   Clientes -->
+
+
+</main>
+<!-- Sitio principal -->
+
+{% endblock %}

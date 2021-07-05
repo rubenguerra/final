@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block titulo %}
+    {% if form.is_valid and buscar_text %}
+    Buscar resultados para: '{{ buscar_text }}'
+    {% else %}
+        Busca Producto
+    {% endif %}
+{% endblock %}
+
+{% block 'busqueda' %}
+<h2>Busqueda por Productos</h2>
+<form>
+    {{ form.as_p }}
+    <button class="btn btn-warning" type="submit">Buscar</button>
+</form>
+
+{% if form.is_valid and buscar_text %}
+<h3>Resultados de la búsqueda para <em>{{ buscar_text }}</em></h3>
+<ul class="list-group">
+    {% for producto in productos %}
+    <li class="list-group-item">
+        <span class="text-info">Nombre:</span><a href="{% url 'producto' producto.pk %}"> {{ producto }}</a>
+        <br>
+        <span class="text-info">Categoria: </span>
+        {% for rubro in producto.rubro.all() %}
+        {{ categoria.rubro }}
+        {% if not forloop.last %}, {% endif %}
+        {% endfor %}
+    </li>
+    {% empty %}
+    <li class="list-group-item">No existen resultados.</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
